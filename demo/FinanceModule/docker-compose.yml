@@ -1,0 +1,37 @@
+#version: '3.8'
+#services:
+#  db:
+#    image: postgres:16
+#    environment:
+#      POSTGRES_PASSWORD: ${DB_PASSWORD}
+#      POSTGRES_USER: ${DB_USER}
+#      POSTGRES_DB: ${DB_NAME}
+#    ports:
+#      - "5432:5432"
+#    volumes:
+#      - pgdata:/var/lib/postgresql/data
+#
+#  app:
+#    image: my_app_image
+#    environment:
+#      SPRING_DATASOURCE_URL: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+#      SPRING_DATASOURCE_USERNAME: ${DB_USER}
+#      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+#    depends_on:
+#      - db
+#    ports:
+#      - "8082:8082"
+#
+#volumes:
+#  pgdata:
+version: '3.8'
+services:
+  app:
+    image: my_app_image  # Ensure this matches your built image
+    build: .
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+      SPRING_DATASOURCE_USERNAME: ${DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "8082:8082"

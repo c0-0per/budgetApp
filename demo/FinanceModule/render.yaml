@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: finance-module-app
+    env: docker
+    repo: https://github.com/yourusername/your-repo
+    branch: master
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DB_HOST
+        value: dpg-cpqti6lumphs73b2hmtg-a
+      - key: DB_PORT
+        value: 5432
+      - key: DB_NAME
+        value: finance_records
+      - key: DB_USER
+        value: user
+      - key: DB_PASSWORD
+        value: AGKa3mKTXBekWxGaV0xldqHQPkJa9YVx
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+      - key: SPRING_DATASOURCE_USERNAME
+        value: ${DB_USER}
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: ${DB_PASSWORD}
