@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  app:
+    image: my_app_image  # Ensure this matches your built image
+    build: .
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+      SPRING_DATASOURCE_USERNAME: ${DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "8082:8082"
