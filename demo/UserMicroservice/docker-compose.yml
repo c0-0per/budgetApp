@@ -1,77 +1,11 @@
-##version: '3.8'
-##services:
-##  app:
-##    build:
-##      context: .
-##      dockerfile: Dockerfile
-##    ports:
-##      - "8080:8080"
-##    environment:
-##      DB_HOST: localhost
-##      DB_PORT: 5432
-##      DB_NAME: Test
-##      DB_USER: postgres
-##      DB_PASSWORD: la1124
-##    depends_on:
-##      - db
-##
-##  db:
-##    image: postgres:13
-##    environment:
-##      POSTGRES_DB: Test
-##      POSTGRES_USER: postgres
-##      POSTGRES_PASSWORD: la1124
-##    ports:
-##      - "5432:5432"
-##
-###version: '3.8'
-###services:
-###  app:
-###    image: my_app_image  # Ensure this matches your built image
-###    build: .
-###    environment:
-###      SPRING_DATASOURCE_URL: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
-###      SPRING_DATASOURCE_USERNAME: ${DB_USER}
-###      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
-###    ports:
-###      - "8080:8080"
-#version: '3.8'
-#services:
-#  db:
-#    image: postgres:13
-#    environment:
-#      POSTGRES_DB: finance_records
-#      POSTGRES_USER: postgres
-#      POSTGRES_PASSWORD: la1124
-#    ports:
-#      - "5433:5432"  # Host port : Container port
-#
-#  app:
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
-#    ports:
-#      - "8080:8080"
-#    environment:
-#      DB_HOST: db  # Connect to the db service by name
-#      DB_PORT: 5432
-#      DB_NAME: finance_records
-#      DB_USER: postgres
-#      DB_PASSWORD: la1124
-#    depends_on:
-#      - db
 version: '3.8'
 services:
-  usermicroservice:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "8081:8080"
+  app:
+    image: my_app_image  # Ensure this matches your built image
+    build: .
     environment:
-      DB_HOST: dpg-cpqti6lumphs73b2hmtg-a
-      DB_PORT: 5432
-      DB_NAME: finance_records
-      DB_USER: user
-      DB_PASSWORD: AGKa3mKTXBekWxGaV0xldqHQPkJa9YVx
-
+      SPRING_DATASOURCE_URL: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+      SPRING_DATASOURCE_USERNAME: ${DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "8080:8080"
