@@ -92,7 +92,7 @@ public class UserController {
         return ResponseEntity.ok(userDto); // Return the user DTO as the response
     }
 
-    @PostMapping("/setroles")
+    @PutMapping ("/setroles")
     public String createRole() {
         roleService.createRole("ROLE_USER", "Standard User Role");
         roleService.createRole("ROLE_ADMIN", "Standard User Role");
