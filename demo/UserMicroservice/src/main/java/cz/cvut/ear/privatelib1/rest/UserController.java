@@ -21,6 +21,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -93,12 +96,13 @@ public class UserController {
     }
 
     @PutMapping ("/setroles")
-    public String createRole() {
-        roleService.createRole("ROLE_USER", "Standard User Role");
-        roleService.createRole("ROLE_ADMIN", "Standard User Role");
-        roleService.createRole("ADMIN", "Standard User Role");
-        roleService.createRole("USER", "Standard User Role");
-        return "x";
+    public ResponseEntity<List<Role>> createRole() {
+        List<Role> roles = new ArrayList<>();
+        roles.add(roleService.createRole("ROLE_USER", "Standard User Role"));
+        roles.add(roleService.createRole("ROLE_ADMIN", "Standard User Role"));
+        roles.add(roleService.createRole("ADMIN", "Standard User Role"));
+        roles.add(roleService.createRole("USER", "Standard User Role"));
+        return ResponseEntity.ok().body(roles);
     }
 
 }
