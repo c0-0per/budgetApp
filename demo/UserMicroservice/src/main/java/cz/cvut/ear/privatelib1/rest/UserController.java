@@ -95,13 +95,13 @@ public class UserController {
         return ResponseEntity.ok(userDto); // Return the user DTO as the response
     }
 
-    @PutMapping ("/setroles")
+    @PutMapping("/setroles")
     public ResponseEntity<List<Role>> createRole() {
         List<Role> roles = new ArrayList<>();
-        roles.add(roleService.createRole("ROLE_USER", "Standard User Role"));
-        roles.add(roleService.createRole("ROLE_ADMIN", "Standard User Role"));
-        roles.add(roleService.createRole("ADMIN", "Standard User Role"));
-        roles.add(roleService.createRole("USER", "Standard User Role"));
+        roles.add(roleService.createRole("ROLE_USER", "Standard User Role", 1));
+        roles.add(roleService.createRole("ROLE_ADMIN", "Standard Admin Role", 2));
+        roles.add(roleService.createRole("ADMIN", "Administrative Role", 3));
+        roles.add(roleService.createRole("USER", "Basic User Role", 4));
         return ResponseEntity.ok().body(roles);
     }
 

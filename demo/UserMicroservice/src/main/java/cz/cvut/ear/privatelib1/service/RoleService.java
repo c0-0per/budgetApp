@@ -15,10 +15,11 @@ public class RoleService {
         return role;
     }
 
-    public Role createRole(String name, String description) {
+    public Role createRole(String name, String description, int id) {
         Role role = new Role();
         role.setName(name);
         role.setDescription(description);
+        role.setId(id);
         return roleDao.save(role);
     }
 }
