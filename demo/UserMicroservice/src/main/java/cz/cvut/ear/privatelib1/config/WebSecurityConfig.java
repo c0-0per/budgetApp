@@ -33,7 +33,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000")); // Allow your React app's origin
+        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000", "https://budgetapp-yybm.onrender.com")); // Allow your React app's origin
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
                 configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "X-Auth-Token"));
         configuration.setAllowCredentials(true);
@@ -85,7 +85,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //    @Bean
 //    public CorsConfigurationSource corsConfigurationSource() {
 //        CorsConfiguration configuration = new CorsConfiguration();
-//        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000", "http://localhost:8080", "http://localhost:8082", "http://localhost:8083")); // Or whatever origin your React app is served from
+//        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000", "https://usermicroservicedocker.onrender.com", "https://financemoduledocker.onrender.com", "http://localhost:8083")); // Or whatever origin your React app is served from
 //        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
 //        configuration.setAllowedHeaders(Arrays.asList("authorization", "content-type", "x-auth-token"));
 //        configuration.setExposedHeaders(Arrays.asList("x-auth-token"));
