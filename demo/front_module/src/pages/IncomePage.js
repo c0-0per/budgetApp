@@ -21,7 +21,7 @@
 // //     }, [userId]);
 // //
 // //     const fetchIncomes = async () => {
-// //         const url = `http://localhost:8081/transactions/incomes/all_incomes_desc?userId=${userId}`;
+// //         const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/all_incomes_desc?userId=${userId}`;
 // //         try {
 // //             const response = await fetch(url);
 // //             if (!response.ok) throw new Error('Error fetching incomes');
@@ -33,7 +33,7 @@
 // //     };
 // //
 // //     const fetchCategories = async () => {
-// //         const url = `http://localhost:8081/transactions/incomes/categories`;
+// //         const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/categories`;
 // //         try {
 // //             const response = await fetch(url);
 // //             if (!response.ok) throw new Error('Error fetching categories');
@@ -50,7 +50,7 @@
 // //             return;
 // //         }
 // //
-// //         const url = `http://localhost:8081/transactions/incomes/add-income?userId=${userId}`;
+// //         const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/add-income?userId=${userId}`;
 // //         try {
 // //             const response = await fetch(url, {
 // //                 method: 'POST',
@@ -74,7 +74,7 @@
 // //             return;
 // //         }
 // //
-// //         const url = `http://localhost:8081/transactions/incomes/add-category`;
+// //         const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/add-category`;
 // //         try {
 // //             const response = await fetch(url, {
 // //                 method: 'POST',
@@ -93,7 +93,7 @@
 // //     };
 // //
 // //     const deleteIncome = async (incomeId) => {
-// //         const url = `http://localhost:8081/transactions/incomes/${incomeId}?userId=${userId}`;
+// //         const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/${incomeId}?userId=${userId}`;
 // //         try {
 // //             const response = await fetch(url, {
 // //                 method: 'DELETE',
@@ -217,13 +217,13 @@
 // // //     }, [userId, sortOrder, filterCategory, filterAmount]);
 // // //
 // // //     const fetchIncomes = async () => {
-// // //         let url = `http://localhost:8081/transactions/incomes/all_incomes_${sortOrder}?userId=${userId}`;
+// // //         let url = `https://transactionmoduledocker.onrender.com/transactions/incomes/all_incomes_${sortOrder}?userId=${userId}`;
 // // //         if (filterCategory) {
-// // //             url = `http://localhost:8081/transactions/incomes/incomes-by-category/${filterCategory}?userId=${userId}`;
+// // //             url = `https://transactionmoduledocker.onrender.com/transactions/incomes/incomes-by-category/${filterCategory}?userId=${userId}`;
 // // //         } else if (filterAmount.from || filterAmount.to) {
 // // //             const from = filterAmount.from || 0;
 // // //             const to = filterAmount.to || Number.MAX_VALUE;
-// // //             url = `http://localhost:8081/transactions/incomes/filter-by-amount?from=${from}&to=${to}&userId=${userId}`;
+// // //             url = `https://transactionmoduledocker.onrender.com/transactions/incomes/filter-by-amount?from=${from}&to=${to}&userId=${userId}`;
 // // //         }
 // // //
 // // //         try {
@@ -237,7 +237,7 @@
 // // //     };
 // // //
 // // //     const fetchCategories = async () => {
-// // //         const url = `http://localhost:8081/transactions/incomes/categories`;
+// // //         const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/categories`;
 // // //         try {
 // // //             const response = await fetch(url);
 // // //             if (!response.ok) throw new Error('Error fetching categories');
@@ -249,7 +249,7 @@
 // // //     };
 // // //
 // // //     const addIncome = async () => {
-// // //         const url = `http://localhost:8081/transactions/incomes/add-income?userId=${userId}`;
+// // //         const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/add-income?userId=${userId}`;
 // // //         try {
 // // //             const response = await fetch(url, {
 // // //                 method: 'POST',
@@ -267,7 +267,7 @@
 // // //     };
 // // //
 // // //     const addCategory = async () => {
-// // //         const url = `http://localhost:8081/transactions/incomes/add-category`;
+// // //         const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/add-category`;
 // // //         try {
 // // //             const response = await fetch(url, {
 // // //                 method: 'POST',
@@ -285,7 +285,7 @@
 // // //     };
 // // //
 // // //     const deleteIncome = async (incomeId) => {
-// // //         const url = `http://localhost:8081/transactions/incomes/${incomeId}?userId=${userId}`;
+// // //         const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/${incomeId}?userId=${userId}`;
 // // //         try {
 // // //             const response = await fetch(url, {
 // // //                 method: 'DELETE',
@@ -437,13 +437,13 @@
 //     }, [userId, sortOrder, filterCategory, filterAmount]);
 //
 //     const fetchIncomes = async () => {
-//         let url = `http://localhost:8081/transactions/incomes/all_incomes_${sortOrder}?userId=${userId}`;
+//         let url = `https://transactionmoduledocker.onrender.com/transactions/incomes/all_incomes_${sortOrder}?userId=${userId}`;
 //         if (filterCategory) {
-//             url = `http://localhost:8081/transactions/incomes/incomes-by-category/${filterCategory}?userId=${userId}`;
+//             url = `https://transactionmoduledocker.onrender.com/transactions/incomes/incomes-by-category/${filterCategory}?userId=${userId}`;
 //         } else if (filterAmount.from || filterAmount.to) {
 //             const from = filterAmount.from || 0;
 //             const to = filterAmount.to || Number.MAX_VALUE;
-//             url = `http://localhost:8081/transactions/incomes/filter-by-amount?from=${from}&to=${to}&userId=${userId}`;
+//             url = `https://transactionmoduledocker.onrender.com/transactions/incomes/filter-by-amount?from=${from}&to=${to}&userId=${userId}`;
 //         }
 //
 //         try {
@@ -457,7 +457,7 @@
 //     };
 //
 //     const fetchCategories = async () => {
-//         const url = `http://localhost:8081/transactions/incomes/categories`;
+//         const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/categories`;
 //         try {
 //             const response = await fetch(url);
 //             if (!response.ok) throw new Error('Error fetching categories');
@@ -469,7 +469,7 @@
 //     };
 //
 //     const addIncome = async () => {
-//         const url = `http://localhost:8081/transactions/incomes/add-income?userId=${userId}`;
+//         const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/add-income?userId=${userId}`;
 //         try {
 //             const response = await fetch(url, {
 //                 method: 'POST',
@@ -487,7 +487,7 @@
 //     };
 //
 //     const addCategory = async () => {
-//         const url = `http://localhost:8081/transactions/incomes/add-category`;
+//         const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/add-category`;
 //         try {
 //             const response = await fetch(url, {
 //                 method: 'POST',
@@ -505,7 +505,7 @@
 //     };
 //
 //     const deleteIncome = async (incomeId) => {
-//         const url = `http://localhost:8081/transactions/incomes/${incomeId}?userId=${userId}`;
+//         const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/${incomeId}?userId=${userId}`;
 //         try {
 //             const response = await fetch(url, {
 //                 method: 'DELETE',
@@ -681,13 +681,13 @@ function IncomePage() {
     }, [userId, sortOrder, filterCategory, filterAmount]);
 
     const fetchIncomes = async () => {
-        let url = `http://localhost:8081/transactions/incomes/all_incomes_${sortOrder}?userId=${userId}`;
+        let url = `https://transactionmoduledocker.onrender.com/transactions/incomes/all_incomes_${sortOrder}?userId=${userId}`;
         if (filterCategory) {
-            url = `http://localhost:8081/transactions/incomes/incomes-by-category/${filterCategory}?userId=${userId}`;
+            url = `https://transactionmoduledocker.onrender.com/transactions/incomes/incomes-by-category/${filterCategory}?userId=${userId}`;
         } else if (filterAmount.from || filterAmount.to) {
             const from = filterAmount.from || 0;
             const to = filterAmount.to || Number.MAX_VALUE;
-            url = `http://localhost:8081/transactions/incomes/filter-by-amount?from=${from}&to=${to}&userId=${userId}`;
+            url = `https://transactionmoduledocker.onrender.com/transactions/incomes/filter-by-amount?from=${from}&to=${to}&userId=${userId}`;
         }
 
         try {
@@ -701,7 +701,7 @@ function IncomePage() {
     };
 
     const fetchCategories = async () => {
-        const url = `http://localhost:8081/transactions/incomes/categories`;
+        const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/categories`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error('Error fetching categories');
@@ -718,7 +718,7 @@ function IncomePage() {
             return;
         }
 
-        const url = `http://localhost:8081/transactions/incomes/add-income?userId=${userId}`;
+        const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/add-income?userId=${userId}`;
         try {
             const response = await fetch(url, {
                 method: 'POST',
@@ -743,7 +743,7 @@ function IncomePage() {
             return;
         }
 
-        const url = `http://localhost:8081/transactions/incomes/add-category`;
+        const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/add-category`;
         try {
             const response = await fetch(url, {
                 method: 'POST',
@@ -761,7 +761,7 @@ function IncomePage() {
     };
 
     const deleteIncome = async (incomeId) => {
-        const url = `http://localhost:8081/transactions/incomes/${incomeId}?userId=${userId}`;
+        const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/${incomeId}?userId=${userId}`;
         try {
             const response = await fetch(url, {
                 method: 'DELETE',

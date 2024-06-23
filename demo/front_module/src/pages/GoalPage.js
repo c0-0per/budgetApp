@@ -15,7 +15,7 @@
 // //                 console.error('User ID is not available');
 // //                 return;
 // //             }
-// //             const url = `http://localhost:8082/finances/goals/${id}?userId=${userId}`;
+// //             const url = `https://financemoduledocker.onrender.com/finances/goals/${id}?userId=${userId}`;
 // //             try {
 // //                 const response = await fetch(url);
 // //                 if (!response.ok) throw new Error('Error fetching goal');
@@ -60,7 +60,7 @@
 //             console.error('User ID is not available');
 //             return;
 //         }
-//         const url = `http://localhost:8082/finances/goals/${id}?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/goals/${id}?userId=${userId}`;
 //         try {
 //             const response = await fetch(url);
 //             if (!response.ok) {
@@ -86,7 +86,7 @@
 //     };
 //
 //     const fetchGoalHistory = async () => {
-//         const url = `http://localhost:8082/finances/goals/${id}/history`;
+//         const url = `https://financemoduledocker.onrender.com/finances/goals/${id}/history`;
 //         try {
 //             const response = await fetch(url);
 //             if (!response.ok) throw new Error('Error fetching goal history');
@@ -103,7 +103,7 @@
 //     }, [id, userId]);
 //
 //     const updateGoal = async () => {
-//         const url = `http://localhost:8082/finances/goals/${id}?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/goals/${id}?userId=${userId}`;
 //         try {
 //             const response = await fetch(url, {
 //                 method: 'PUT',
@@ -178,7 +178,7 @@
 //             console.error('User ID is not available');
 //             return;
 //         }
-//         const url = `http://localhost:8082/finances/goals/${id}?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/goals/${id}?userId=${userId}`;
 //         try {
 //             const response = await fetch(url);
 //             const status = response.status; // Add this line to log the status
@@ -206,7 +206,7 @@
 //     };
 //
 //     const fetchGoalHistory = async () => {
-//         const url = `http://localhost:8082/finances/goals/${id}/history`;
+//         const url = `https://financemoduledocker.onrender.com/finances/goals/${id}/history`;
 //         try {
 //             const response = await fetch(url);
 //             if (!response.ok) throw new Error('Error fetching goal history');
@@ -223,7 +223,7 @@
 //     }, [id, userId]);
 //
 //     const updateGoal = async () => {
-//         const url = `http://localhost:8082/finances/goals/${id}?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/goals/${id}?userId=${userId}`;
 //         try {
 //             const response = await fetch(url, {
 //                 method: 'PUT',
@@ -299,7 +299,7 @@ function GoalPage() {
             console.error('User ID is not available');
             return;
         }
-        const url = `http://localhost:8082/finances/goals/${id}?userId=${userId}`;
+        const url = `https://financemoduledocker.onrender.com/finances/goals/${id}?userId=${userId}`;
         try {
             const response = await fetch(url);
             const status = response.status; // Add this line to log the status
@@ -327,7 +327,7 @@ function GoalPage() {
     };
 
     const fetchGoalHistory = async () => {
-        const url = `http://localhost:8082/finances/goals/${id}/history`;
+        const url = `https://financemoduledocker.onrender.com/finances/goals/${id}/history`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error('Error fetching goal history');
@@ -344,7 +344,7 @@ function GoalPage() {
     }, [id, userId]);
 
     const updateGoal = async () => {
-        const url = `http://localhost:8082/finances/goals/${id}?userId=${userId}`;
+        const url = `https://financemoduledocker.onrender.com/finances/goals/${id}?userId=${userId}`;
         try {
             const response = await fetch(url, {
                 method: 'PUT',

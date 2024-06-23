@@ -14,7 +14,7 @@
 // // // //     }, [userId]);
 // // // //
 // // // //     const fetchGoals = async (userId) => {
-// // // //         fetch('http://localhost:8082/finances/goals/all?userId=${userId}')
+// // // //         fetch('https://financemoduledocker.onrender.com/finances/goals/all?userId=${userId}')
 // // // //             .then(response => {
 // // // //                 if (!response.ok) throw new Error('Error fetching goals');
 // // // //                 return response.json();
@@ -59,7 +59,7 @@
 // // //                 return;
 // // //             }
 // // //
-// // //             const url = `http://localhost:8082/finances/goals/all?userId=${userId}`;
+// // //             const url = `https://financemoduledocker.onrender.com/finances/goals/all?userId=${userId}`;
 // // //             console.log('Fetching goals from:', url);
 // // //
 // // //             try {
@@ -108,7 +108,7 @@
 // // //     }, [userId]);
 // // //
 // // //     const fetchGoals = async (userId) => {
-// // //         const url = `http://localhost:8082/finances/goals/all?userId=${userId}`;
+// // //         const url = `https://financemoduledocker.onrender.com/finances/goals/all?userId=${userId}`;
 // // //         console.log('Fetching goals from:', url); // Debugging log
 // // //
 // // //         try {
@@ -156,7 +156,7 @@
 // //     }, [userId]);
 // //
 // //     const fetchGoals = async (userId) => {
-// //         const url = `http://localhost:8082/finances/goals/all?userId=${userId}`;
+// //         const url = `https://financemoduledocker.onrender.com/finances/goals/all?userId=${userId}`;
 // //         console.log('Fetching goals from:', url); // Debugging log
 // //
 // //         try {
@@ -172,7 +172,7 @@
 // //     };
 // //
 // //     const addGoal = async () => {
-// //         const url = `http://localhost:8082/finances/goals/add-goal?userId=${userId}`;
+// //         const url = `https://financemoduledocker.onrender.com/finances/goals/add-goal?userId=${userId}`;
 // //         const goalData = { name: newGoal.name, amount: newGoal.amount };
 // //
 // //         try {
@@ -196,7 +196,7 @@
 // //     };
 // //
 // //     const deleteGoal = async (goalId) => {
-// //         const url = `http://localhost:8082/finances/goals/${goalId}?userId=${userId}`;
+// //         const url = `https://financemoduledocker.onrender.com/finances/goals/${goalId}?userId=${userId}`;
 // //
 // //         try {
 // //             const response = await fetch(url, {
@@ -260,7 +260,7 @@
 //     }, [userId]);
 //
 //     const fetchDebts = async (userId) => {
-//         const url = `http://localhost:8082/finances/debts/all?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/debts/all?userId=${userId}`;
 //         console.log('Fetching debts from:', url); // Debugging log
 //
 //         try {
@@ -285,7 +285,7 @@
 //     };
 //
 //     const addDebt = async () => {
-//         const url = `http://localhost:8082/finances/debts/add-debt?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/debts/add-debt?userId=${userId}`;
 //         const debtData = {
 //             name: newDebt.name,
 //             amount: newDebt.amount,
@@ -314,7 +314,7 @@
 //     };
 //
 //     const deleteDebt = async (debtId) => {
-//         const url = `http://localhost:8082/finances/debts/${debtId}?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/debts/${debtId}?userId=${userId}`;
 //
 //         try {
 //             const response = await fetch(url, {
@@ -399,7 +399,7 @@
 // //     }, [userId]);
 // //
 // //     const fetchGoals = async (userId) => {
-// //         const url = `http://localhost:8082/finances/debts/all?userId=${userId}`;
+// //         const url = `https://financemoduledocker.onrender.com/finances/debts/all?userId=${userId}`;
 // //         console.log('Fetching debts from:', url); // Debugging log
 // //
 // //         try {
@@ -415,7 +415,7 @@
 // //     };
 // //
 // //     const addGoal = async () => {
-// //         const url = `http://localhost:8082/finances/debts/add-debt?userId=${userId}`;
+// //         const url = `https://financemoduledocker.onrender.com/finances/debts/add-debt?userId=${userId}`;
 // //         const goalData = { name: newGoal.name, amount: newGoal.amount , nameOfPersonToGiveBack: newGoal.nameOfPersonToGiveBack,
 // //             dueDate: newGoal.dueDate, fromDate: newGoal.fromDate,interestRate: newGoal.interestRate };
 // //
@@ -441,7 +441,7 @@
 // //     };
 // //
 // //     const deleteGoal = async (goalId) => {
-// //         const url = `http://localhost:8082/finances/debts/${goalId}?userId=${userId}`;
+// //         const url = `https://financemoduledocker.onrender.com/finances/debts/${goalId}?userId=${userId}`;
 // //
 // //         try {
 // //             const response = await fetch(url, {
@@ -539,7 +539,7 @@ function Debt() {
     }, [userId]);
 
     const fetchDebts = async (userId) => {
-        const url = `http://localhost:8082/finances/debts/all?userId=${userId}`;
+        const url = `https://financemoduledocker.onrender.com/finances/debts/all?userId=${userId}`;
         console.log('Fetching debts from:', url); // Debugging log
 
         try {
@@ -564,7 +564,7 @@ function Debt() {
     };
 
     const addDebt = async () => {
-        const url = `http://localhost:8082/finances/debts/add-debt?userId=${userId}`;
+        const url = `https://financemoduledocker.onrender.com/finances/debts/add-debt?userId=${userId}`;
         const debtData = {
             name: newDebt.name,
             amount: newDebt.amount,
@@ -593,7 +593,7 @@ function Debt() {
     };
 
     const deleteDebt = async (debtId) => {
-        const url = `http://localhost:8082/finances/debts/${debtId}?userId=${userId}`;
+        const url = `https://financemoduledocker.onrender.com/finances/debts/${debtId}?userId=${userId}`;
 
         try {
             const response = await fetch(url, {

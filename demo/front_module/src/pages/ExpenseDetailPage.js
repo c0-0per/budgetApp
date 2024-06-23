@@ -20,7 +20,7 @@ function ExpenseDetailPage() {
     }, [userId]);
 
     const fetchExpense = async () => {
-        const url = `http://localhost:8081/transactions/expenses/${id}?userId=${userId}`;
+        const url = `https://transactionmoduledocker.onrender.com/transactions/expenses/${id}?userId=${userId}`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error('Error fetching expense');
@@ -33,7 +33,7 @@ function ExpenseDetailPage() {
     };
 
     const fetchCategories = async () => {
-        const url = `http://localhost:8081/transactions/expenses/categories`;
+        const url = `https://transactionmoduledocker.onrender.com/transactions/expenses/categories`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error('Error fetching categories');
@@ -45,7 +45,7 @@ function ExpenseDetailPage() {
     };
 
     const updateExpense = async () => {
-        const url = `http://localhost:8081/transactions/expenses/${id}?userId=${userId}`;
+        const url = `https://transactionmoduledocker.onrender.com/transactions/expenses/${id}?userId=${userId}`;
         try {
             const response = await fetch(url, {
                 method: 'PUT',

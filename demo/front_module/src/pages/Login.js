@@ -34,7 +34,7 @@ export default function Login() {
     const handleRegisterSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch('http://localhost:8080/users/register', {
+            const response = await fetch('https://usermicroservicedocker.onrender.com/users/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -15,7 +15,7 @@
 //             console.error('User ID is not available');
 //             return;
 //         }
-//         const url = `http://localhost:8082/finances/debts/${id}?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/debts/${id}?userId=${userId}`;
 //         try {
 //             const response = await fetch(url);
 //             if (!response.ok) throw new Error('Error fetching debt');
@@ -38,7 +38,7 @@
 //     }, [id, userId]);
 //
 //     const updateDebt = async () => {
-//         const url = `http://localhost:8082/finances/debts/${id}?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/debts/${id}?userId=${userId}`;
 //         try {
 //             const response = await fetch(url, {
 //                 method: 'PUT',
@@ -55,7 +55,7 @@
 //     };
 //
 //     const setCalculationStrategy = async (strategyNumber) => {
-//         const url = `http://localhost:8082/finances/debts/${id}/set-calculation-strategy?userId=${userId}&numberOfStrategy=${strategyNumber}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/debts/${id}/set-calculation-strategy?userId=${userId}&numberOfStrategy=${strategyNumber}`;
 //         try {
 //             const response = await fetch(url, {
 //                 method: 'POST',
@@ -71,7 +71,7 @@
 //
 //     const fetchInterestRate = async () => {
 //         await setCalculationStrategy(strategy); // Set the strategy before calculating interest
-//         const url = `http://localhost:8082/finances/debts/${id}/interest-rate?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/debts/${id}/interest-rate?userId=${userId}`;
 //         try {
 //             const response = await fetch(url);
 //             if (!response.ok) throw new Error('Error fetching interest rate');
@@ -164,7 +164,7 @@ function DebtPage() {
             console.error('User ID is not available');
             return;
         }
-        const url = `http://localhost:8082/finances/debts/${id}?userId=${userId}`;
+        const url = `https://financemoduledocker.onrender.com/finances/debts/${id}?userId=${userId}`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error('Error fetching debt');
@@ -187,7 +187,7 @@ function DebtPage() {
     }, [id, userId]);
 
     const updateDebt = async () => {
-        const url = `http://localhost:8082/finances/debts/${id}?userId=${userId}`;
+        const url = `https://financemoduledocker.onrender.com/finances/debts/${id}?userId=${userId}`;
         try {
             const response = await fetch(url, {
                 method: 'PUT',
@@ -204,7 +204,7 @@ function DebtPage() {
     };
 
     const setCalculationStrategy = async (strategyNumber) => {
-        const url = `http://localhost:8082/finances/debts/${id}/set-calculation-strategy?userId=${userId}&numberOfStrategy=${strategyNumber}`;
+        const url = `https://financemoduledocker.onrender.com/finances/debts/${id}/set-calculation-strategy?userId=${userId}&numberOfStrategy=${strategyNumber}`;
         try {
             const response = await fetch(url, {
                 method: 'POST',
@@ -220,7 +220,7 @@ function DebtPage() {
 
     const fetchInterestRate = async () => {
         await setCalculationStrategy(strategy); // Set the strategy before calculating interest
-        const url = `http://localhost:8082/finances/debts/${id}/interest-rate?userId=${userId}`;
+        const url = `https://financemoduledocker.onrender.com/finances/debts/${id}/interest-rate?userId=${userId}`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error('Error fetching interest rate');

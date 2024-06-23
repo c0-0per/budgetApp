@@ -19,7 +19,7 @@
 //             return;
 //         }
 //
-//         fetch('http://localhost:8080/users/info', { // Adjust the URL to your user info endpoint
+//         fetch('https://usermicroservicedocker.onrender.com/users/info', { // Adjust the URL to your user info endpoint
 //             headers: {
 //                 'Authorization': `Bearer ${token}`,
 //             },
@@ -60,7 +60,7 @@
 //
 //     const login = async (loginUsername, loginPassword) => {
 //         try {
-//             const response = await fetch('http://localhost:8080/users/authenticate', {
+//             const response = await fetch('https://usermicroservicedocker.onrender.com/users/authenticate', {
 //                 method: 'POST',
 //                 headers: { 'Content-Type': 'application/json' },
 //                 body: JSON.stringify({ username: loginUsername, password: loginPassword }),
@@ -115,7 +115,7 @@ export const AuthProvider = ({ children }) => {
             return;
         }
 
-        fetch('http://localhost:8080/users/info', {
+        fetch('https://usermicroservicedocker.onrender.com/users/info', {
             headers: {
                 'Authorization': `Bearer ${token}`,
             },
@@ -145,7 +145,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (loginUsername, loginPassword) => {
         try {
-            const response = await fetch('http://localhost:8080/users/authenticate', {
+            const response = await fetch('https://usermicroservicedocker.onrender.com/users/authenticate', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username: loginUsername, password: loginPassword }),

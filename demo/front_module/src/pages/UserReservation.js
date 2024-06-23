@@ -13,7 +13,7 @@ function UserReservations() {
             return;
         }
 
-        fetch('http://localhost:8080/api/reservations/user', {
+        fetch('https://usermicroservicedocker.onrender.com/api/reservations/user', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

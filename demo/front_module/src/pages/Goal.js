@@ -14,7 +14,7 @@
 // // //     }, [userId]);
 // // //
 // // //     const fetchGoals = async (userId) => {
-// // //         fetch('http://localhost:8082/finances/goals/all?userId=${userId}')
+// // //         fetch('https://financemoduledocker.onrender.com/finances/goals/all?userId=${userId}')
 // // //             .then(response => {
 // // //                 if (!response.ok) throw new Error('Error fetching goals');
 // // //                 return response.json();
@@ -59,7 +59,7 @@
 // //                 return;
 // //             }
 // //
-// //             const url = `http://localhost:8082/finances/goals/all?userId=${userId}`;
+// //             const url = `https://financemoduledocker.onrender.com/finances/goals/all?userId=${userId}`;
 // //             console.log('Fetching goals from:', url);
 // //
 // //             try {
@@ -108,7 +108,7 @@
 // //     }, [userId]);
 // //
 // //     const fetchGoals = async (userId) => {
-// //         const url = `http://localhost:8082/finances/goals/all?userId=${userId}`;
+// //         const url = `https://financemoduledocker.onrender.com/finances/goals/all?userId=${userId}`;
 // //         console.log('Fetching goals from:', url); // Debugging log
 // //
 // //         try {
@@ -156,7 +156,7 @@
 //     }, [userId]);
 //
 //     const fetchGoals = async (userId) => {
-//         const url = `http://localhost:8082/finances/goals/all?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/goals/all?userId=${userId}`;
 //         console.log('Fetching goals from:', url); // Debugging log
 //
 //         try {
@@ -172,7 +172,7 @@
 //     };
 //
 //     const addGoal = async () => {
-//         const url = `http://localhost:8082/finances/goals/add-goal?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/goals/add-goal?userId=${userId}`;
 //         const goalData = { name: newGoal.name, amount: newGoal.amount };
 //
 //         try {
@@ -196,7 +196,7 @@
 //     };
 //
 //     const deleteGoal = async (goalId) => {
-//         const url = `http://localhost:8082/finances/goals/${goalId}?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/goals/${goalId}?userId=${userId}`;
 //
 //         try {
 //             const response = await fetch(url, {
@@ -260,7 +260,7 @@
 //     }, [userId]);
 //
 //     const fetchGoals = async (userId) => {
-//         const url = `http://localhost:8082/finances/goals/all?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/goals/all?userId=${userId}`;
 //         console.log('Fetching goals from:', url); // Debugging log
 //
 //         try {
@@ -276,7 +276,7 @@
 //     };
 //
 //     const addGoal = async () => {
-//         const url = `http://localhost:8082/finances/goals/add-goal?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/goals/add-goal?userId=${userId}`;
 //         const goalData = { name: newGoal.name, amount: newGoal.amount };
 //
 //         try {
@@ -300,7 +300,7 @@
 //     };
 //
 //     const deleteGoal = async (goalId) => {
-//         const url = `http://localhost:8082/finances/goals/${goalId}?userId=${userId}`;
+//         const url = `https://financemoduledocker.onrender.com/finances/goals/${goalId}?userId=${userId}`;
 //
 //         try {
 //             const response = await fetch(url, {
@@ -374,7 +374,7 @@ function Goal() {
     }, [userId]);
 
     const fetchGoals = async (userId) => {
-        const url = `http://localhost:8082/finances/goals/all?userId=${userId}`;
+        const url = `https://financemoduledocker.onrender.com/finances/goals/all?userId=${userId}`;
         console.log('Fetching goals from:', url); // Debugging log
 
         try {
@@ -390,7 +390,7 @@ function Goal() {
     };
 
     const addGoal = async () => {
-        const url = `http://localhost:8082/finances/goals/add-goal?userId=${userId}`;
+        const url = `https://financemoduledocker.onrender.com/finances/goals/add-goal?userId=${userId}`;
         const goalData = { name: newGoal.name, amount: newGoal.amount };
 
         try {
@@ -414,7 +414,7 @@ function Goal() {
     };
 
     const deleteGoal = async (goalId) => {
-        const url = `http://localhost:8082/finances/goals/${goalId}?userId=${userId}`;
+        const url = `https://financemoduledocker.onrender.com/finances/goals/${goalId}?userId=${userId}`;
 
         try {
             const response = await fetch(url, {

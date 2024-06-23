@@ -20,7 +20,7 @@ function IncomeDetailsPage() {
     }, [userId, id]);
 
     const fetchIncome = async () => {
-        const url = `http://localhost:8081/transactions/incomes/${id}?userId=${userId}`;
+        const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/${id}?userId=${userId}`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error('Error fetching income');
@@ -32,7 +32,7 @@ function IncomeDetailsPage() {
     };
 
     const fetchCategories = async () => {
-        const url = `http://localhost:8081/transactions/incomes/categories`;
+        const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/categories`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error('Error fetching categories');
@@ -49,7 +49,7 @@ function IncomeDetailsPage() {
             return;
         }
 
-        const url = `http://localhost:8081/transactions/incomes/${id}?userId=${userId}`;
+        const url = `https://transactionmoduledocker.onrender.com/transactions/incomes/${id}?userId=${userId}`;
         try {
             const response = await fetch(url, {
                 method: 'PUT',

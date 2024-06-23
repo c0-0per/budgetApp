@@ -23,13 +23,13 @@ function ExpensePage() {
     }, [userId, sortOrder, filterCategory, filterAmount]);
 
     const fetchExpenses = async () => {
-        let url = `http://localhost:8081/transactions/expenses/all_expenses_${sortOrder}?userId=${userId}`;
+        let url = `https://transactionmoduledocker.onrender.com/transactions/expenses/all_expenses_${sortOrder}?userId=${userId}`;
         if (filterCategory) {
-            url = `http://localhost:8081/transactions/expenses/expenses-by-category/${filterCategory}?userId=${userId}`;
+            url = `https://transactionmoduledocker.onrender.com/transactions/expenses/expenses-by-category/${filterCategory}?userId=${userId}`;
         } else if (filterAmount.from || filterAmount.to) {
             const from = filterAmount.from || 0;
             const to = filterAmount.to || Number.MAX_VALUE;
-            url = `http://localhost:8081/transactions/expenses/filter-by-amount?from=${from}&to=${to}&userId=${userId}`;
+            url = `https://transactionmoduledocker.onrender.com/transactions/expenses/filter-by-amount?from=${from}&to=${to}&userId=${userId}`;
         }
 
         try {
@@ -43,7 +43,7 @@ function ExpensePage() {
     };
 
     const fetchCategories = async () => {
-        const url = `http://localhost:8081/transactions/expenses/categories`;
+        const url = `https://transactionmoduledocker.onrender.com/transactions/expenses/categories`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error('Error fetching categories');
@@ -60,7 +60,7 @@ function ExpensePage() {
             return;
         }
 
-        const url = `http://localhost:8081/transactions/expenses/add-expense?userId=${userId}`;
+        const url = `https://transactionmoduledocker.onrender.com/transactions/expenses/add-expense?userId=${userId}`;
         try {
             const response = await fetch(url, {
                 method: 'POST',
@@ -83,7 +83,7 @@ function ExpensePage() {
             return;
         }
 
-        const url = `http://localhost:8081/transactions/expenses/add-category`;
+        const url = `https://transactionmoduledocker.onrender.com/transactions/expenses/add-category`;
         try {
             const response = await fetch(url, {
                 method: 'POST',
@@ -101,7 +101,7 @@ function ExpensePage() {
     };
 
     const deleteExpense = async (expenseId) => {
-        const url = `http://localhost:8081/transactions/expenses/${expenseId}?userId=${userId}`;
+        const url = `https://transactionmoduledocker.onrender.com/transactions/expenses/${expenseId}?userId=${userId}`;
         try {
             const response = await fetch(url, {
                 method: 'DELETE',
