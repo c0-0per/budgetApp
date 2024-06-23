@@ -97,7 +97,7 @@ public class UserController {
         roleService.createRole("ROLE_USER", "Standard User Role");
         roleService.createRole("ROLE_ADMIN", "Standard User Role");
         roleService.createRole("ADMIN", "Standard User Role");
-
+        roleService.createRole("USER", "Standard User Role");
         return "x";
     }
 
