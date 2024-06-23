@@ -5,9 +5,12 @@ import cz.cvut.ear.privatelib1.config.TokenProvider;
 import cz.cvut.ear.privatelib1.dto.UserDto;
 import cz.cvut.ear.privatelib1.model.AuthToken;
 import cz.cvut.ear.privatelib1.model.LoginUser;
+import cz.cvut.ear.privatelib1.model.Role;
 import cz.cvut.ear.privatelib1.model.User;
+import cz.cvut.ear.privatelib1.service.RoleService;
 import cz.cvut.ear.privatelib1.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -32,6 +35,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private RoleService roleService;
 
 
     @RequestMapping(value="/register", method = RequestMethod.POST)
@@ -84,6 +90,15 @@ public class UserController {
         userDto.setId(user.getId());
 
         return ResponseEntity.ok(userDto); // Return the user DTO as the response
+    }
+
+    @PostMapping("/setroles")
+    public String createRole() {
+        roleService.createRole("ROLE_USER", "Standard User Role");
+        roleService.createRole("ROLE_ADMIN", "Standard User Role");
+        roleService.createRole("ADMIN", "Standard User Role");
+
+        return "x";
     }
 
 }

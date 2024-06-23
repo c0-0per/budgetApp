@@ -14,4 +14,11 @@ public class RoleService {
         Role role = roleDao.findRoleByName(name);
         return role;
     }
+
+    public Role createRole(String name, String description) {
+        Role role = new Role();
+        role.setName(name);
+        role.setDescription(description);
+        return roleDao.save(role);
+    }
 }
