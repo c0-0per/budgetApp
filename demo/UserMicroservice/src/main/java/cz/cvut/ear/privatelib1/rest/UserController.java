@@ -45,6 +45,8 @@ public class UserController {
 
     @RequestMapping(value="/register", method = RequestMethod.POST)
     public User saveUser(@RequestBody UserDto user){
+        roleService.createRole("ADMIN", "Administrative Role", 3);
+        roleService.createRole("USER", "Basic User Role", 4);
         return userService.save(user);
     }
 
